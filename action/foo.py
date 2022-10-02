@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
+import os
 
 
 def main():
     print("Hello!")
-    print("::warning:: This is a warning")
+    print(os.environ.get("GITHUB_ACTION", "$GITHUB_ACTION not found"))
+    print("::warning::This is a warning")
+    print("::error::This is an error")
 
 
 if __name__ == "__main__":
