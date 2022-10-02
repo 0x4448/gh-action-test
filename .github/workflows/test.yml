@@ -1,0 +1,13 @@
+name: test-action
+
+on:
+  pull_request:
+    branches: [dev]
+
+jobs:
+  dotnet-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "hello world"
+      - run: echo "::warning this is a warning"
