@@ -5,7 +5,15 @@ on:
     branches: [dev]
 
 jobs:
-  dotnet-format:
+  foov1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: python -m action.foo
+  foov2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
